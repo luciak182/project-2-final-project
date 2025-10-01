@@ -1,0 +1,76 @@
+:root {
+  --red: rgb(214, 28, 28);
+  --gray: gray;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  background-color: black;
+}
+
+.movies {
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Button Zpet na hlavni */
+.btn {
+  color: white;
+  background-color: var(--red);
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  font-weight: 700;
+  transition: transform 0.2s;
+  width: 150px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Roletka s vyberem moznosti*/
+select {
+  background-color: black;
+  color: white;
+  border: 3px solid var(--red);
+  width: 150px;
+  padding: 5px;
+  transition: transform 0.2s;
+}
+
+select:hover {
+  transform: scale(1.05);
+}
+
+/* Plakaty pro vybrane filmy ve flexboxu */
+.posters {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.posters img {
+  flex: 1;
+  width: 100%;
+  max-width: 250px;
+  cursor: pointer;
+  transform: rotate(3deg);
+  transition: transform 0.2s;
+}
+
+.posters img:hover {
+  transform: rotate(0deg);
+}

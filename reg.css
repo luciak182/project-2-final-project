@@ -1,0 +1,94 @@
+:root {
+  --red: rgb(214, 28, 28);
+  --gray: gray;
+  --green: green;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  background-color: black;
+}
+
+/* Button pro sekci Header */
+
+.btn {
+  color: white;
+  background-color: var(--red);
+  text-decoration: none;
+  padding: 5px 10px;
+  font-weight: 700;
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Header s logem a buttonem */
+
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+header img {
+  height: 50px;
+  margin-left: 10px;
+}
+
+header .btn {
+  margin-right: 10px;
+}
+
+/* Formulář - inputy a button */
+
+.reg-form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reg-form input {
+  height: 30px;
+  padding: 10px;
+  color: var(--gray);
+  background-color: transparent;
+  border: 3px solid var(--gray);
+}
+
+.reg-form button {
+  height: 20px;
+  background-color: var(--red);
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.reg-form button:hover {
+  transform: scale(1.05);
+}
+
+/* Formulář - Změna barev při ověření hesla (JS) */
+.reg-form input.green {
+  border: 5px solid var(--green);
+}
+
+.reg-form input.red {
+  border: 5px solid var(--red);
+}

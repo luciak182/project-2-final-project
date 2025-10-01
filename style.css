@@ -1,0 +1,222 @@
+:root {
+  --red: rgb(214, 28, 28);
+  --gray: gray;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  background-color: black;
+}
+
+/* Button pro sekce Header a Movies */
+
+.btn {
+  color: white;
+  background-color: var(--red);
+  text-decoration: none;
+  padding: 5px 10px;
+  font-weight: 700;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Header s logem a buttonem */
+
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+header img {
+  height: 50px;
+  margin-left: 10px;
+}
+
+header .btn {
+  margin-right: 10px;
+}
+
+/* Hero sekce s emailingem */
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url(./img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: calc(80vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container {
+  width: 80%;
+  max-width: 450px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+form input {
+  background-color: transparent;
+  border: 2px solid var(--gray);
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+form button {
+  background-color: var(--red);
+  padding: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40%;
+  transition: transform 0.2s;
+}
+
+form button:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .hero-container {
+    max-width: 550px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  form {
+    flex-direction: row;
+  }
+
+  form input {
+    width: 85%;
+  }
+
+  form button {
+    width: 15%;
+  }
+}
+
+/* Movies sekce s nej filmy */
+.movies {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.movies-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.movies-container img {
+  max-width: 250px;
+  width: 100%;
+  transition: transform 0.2s;
+}
+
+.movies img:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .movies-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* Footer s textovými odkazy */
+footer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-item {
+  min-width: 200px;
+  padding-bottom: 10px;
+}
+
+.footer-item a {
+  color: var(--gray);
+}
+
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+/* Šipka - vlevo dole, vrací zpět nahoru (JS) */
+.arrow {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 40px;
+  color: var(--red);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s;
+}
+
+.arrow:hover {
+  transform: scale(1.1);
+}
+
+.arrow-visible {
+  display: block;
+}
